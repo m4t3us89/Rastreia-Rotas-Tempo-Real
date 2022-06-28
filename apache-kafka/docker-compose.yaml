@@ -87,7 +87,8 @@ services:
     # when running this offline, spin up the stack once and then run :
     #   docker cp kafka-connect:/usr/share/confluent-hub-components ./data/connect-jars
     volumes:
-      - $PWD/data:/data
+      - /home/ammreis/imersao-fullcycle-8/apache-kafka/data:/data
+      # USAR PWD PARA PEGAR O DIRETORIO $PWD=/home/ammreis/imersao-fullcycle-8/apache-kafka/
     # In the command section, $ are replaced with $$ to avoid the error 'Invalid interpolation format for "command" option'
     command:
       - bash
