@@ -81,10 +81,10 @@ export class RoutesController implements OnModuleInit {
       };
     },
   ) {
-    console.log('consumer from route.new-position', message.value)
-  this.routeGateway.sendPosition({
-    ...message.value,
-    position: [message.value.position[1], message.value.position[0]],
-  });
+    console.log('consumer from route.new-position', message.value);
+    this.routeGateway.sendPosition({
+      ...message.value,
+      position: [message.value.position[1], message.value.position[0]],
+    });
   }
 }
